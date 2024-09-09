@@ -1,0 +1,28 @@
+package com.qsp;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class CarsDriver {
+
+	public static void main(String[] args) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("dev");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		
+		Cars c1 = new Cars();
+		c1.setId(1);
+		c1.setBrand("Lexus");
+		c1.setModel("Nuvia");
+		c1.setPrice(350000);
+		
+		et.begin();
+		em.persist(c1);
+		et.commit();
+		
+		System.out.println("Inserted");
+	}
+
+}
