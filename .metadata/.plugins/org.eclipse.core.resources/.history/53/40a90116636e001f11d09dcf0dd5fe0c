@@ -35,18 +35,8 @@ public class ProductDriver {
 		em.persist(r1);
 		em.persist(p);
 		et.commit();*/
-//		System.out.println("Products Committed.");
+		System.out.println("Products Committed.");
 		
-		/* Update
-		 * */
-		Product p = new Product();
-		Review r1 = new Review();
-		
-		em.find(Product.class, 12);
-		em.find(Product.class, 12);
-		
-		/* Get
-		 * */
 		System.out.println(em.find(Product.class, 12));;
 		System.out.println(em.find(Review.class, 2));;
 	}

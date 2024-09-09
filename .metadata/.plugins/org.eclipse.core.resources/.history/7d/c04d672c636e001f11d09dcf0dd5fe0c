@@ -43,7 +43,6 @@ public class ProductDriver {
 		Review r1 = new Review();
 		
 		em.find(Product.class, 12);
-		em.find(Product.class, 12);
 		
 		/* Get
 		 * */
