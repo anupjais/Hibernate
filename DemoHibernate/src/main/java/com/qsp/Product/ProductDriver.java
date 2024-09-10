@@ -39,11 +39,30 @@ public class ProductDriver {
 		
 		/* Update
 		 * */
-		Product p = new Product();
-		Review r1 = new Review();
+//		Product p = new Product();
+//		Review r1 = new Review();
 		
-		em.find(Product.class, 12);
-		em.find(Product.class, 12);
+		/*Product p=em.find(Product.class, 12);
+		Review r1=em.find(Review.class, 3);
+		
+		p.setPrice(15);
+		r1.setMsg("Cost effective marker.");
+		r1.setProd(p);
+		
+		et.begin();
+		em.merge(p);
+		em.merge(r1);
+		et.commit();
+		System.out.println("Updated..");*/
+		
+		
+		/*Delete
+		 * */
+		
+		et.begin();
+		em.remove(em.find(Review.class,3));
+		et.commit();
+		System.out.println("Data deleted.");
 		
 		/* Get
 		 * */
